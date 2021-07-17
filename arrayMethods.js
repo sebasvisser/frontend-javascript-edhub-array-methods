@@ -24,7 +24,7 @@ const filteredInventors = inventors.filter((inventor) => {
     return true;
   }
 })
-console.log(filteredInventors);
+console.log({filteredInventors});
 
 // 2. Maak een array met daarin alle geboortejaren van de uitvinders
 // Verwachte uitkomst: [1879, 1643, 1564, 1867, 1571, 1473, 1858, 1898, 1815, 1855, 1878, 1847];
@@ -32,7 +32,7 @@ console.log(filteredInventors);
 const inventorYears = inventors.map((inventor) => {
   return inventor.year;
 })
-console.log(inventorYears);
+console.log({inventorYears});
 
 
 // 3. Maak een array met daarin alle volledige namen van de uitvinders (dus voor- en achternaam als één string)
@@ -41,7 +41,7 @@ console.log(inventorYears);
 const fullNameInventors = inventors.map((inventor) => {
  return inventor.first +" " + inventor.last;
 })
-console.log(fullNameInventors);
+console.log({fullNameInventors});
 
 
 // 4. Sorteer de uitvinders op geboortejaar, oplopend van oudste naar jongste uitvinder
@@ -64,7 +64,7 @@ console.log(fullNameInventors);
 const sortedInventors = inventors.sort((a, b) => {
   return a.year - b.year;
 })
-console.log(sortedInventors);
+console.log({sortedInventors});
 
 // 5. Sorteer de uitvinders op hoeveel jaren ze geleefd hebben, van langste leven naar kortste leven
 // Verwachte uitkomst:
@@ -83,7 +83,12 @@ console.log(sortedInventors);
 // { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 }
 // ]
 
-
+const sortedInventorsTwo = inventors.sort((a, b) => {
+  let ageA = a.passed - a.year;
+  let ageB = b.passed - b.year;
+  return ageB - ageA;
+})
+console.log({sortedInventorsTwo});
 
 
 // 6. Vind de gegevens over de uitvinder wiens achternaam 'Edison' is.
