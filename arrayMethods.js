@@ -39,7 +39,7 @@ console.log({inventorYears});
 // Verwachte uitkomst: [ 'Albert Einstein', 'Isaac Newton', 'Galileo Galilei', 'Marie Curie', 'Johannes Kepler', 'Nicolaus Copernicus', 'Max Planck', 'Katherine Blodgett', 'Ada Lovelace', 'Sarah E. Goode', 'Lise Meitner', 'Thomas Edison']
 
 const fullNameInventors = inventors.map((inventor) => {
- return inventor.first +" " + inventor.last;
+ return inventor.first + " " + inventor.last;
 })
 console.log({fullNameInventors});
 
@@ -61,6 +61,7 @@ console.log({fullNameInventors});
 //   { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 }
 // ]
 
+// Nakijken: Dit hoeft niet in een aparte variabele
 const sortedInventors = inventors.sort((a, b) => {
   return a.year - b.year;
 })
@@ -83,6 +84,7 @@ console.log({sortedInventors});
 // { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 }
 // ]
 
+//Ook hier hoeft het niet in een aparte variabele (sort)
 const sortedInventorsTwo = inventors.sort((a, b) => {
   let ageA = a.passed - a.year;
   let ageB = b.passed - b.year;
